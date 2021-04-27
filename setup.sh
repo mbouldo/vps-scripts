@@ -1,18 +1,16 @@
 #!/bin/bash
 
-
 # set locale
 localectl set-locale LANG=en_US.UTF-8 LANGUAGE="en_US:en"
 
 # set timezone
-timedatectl set-timezone America/New_York
-
+timedatectl set-timezone UTC
 
 # update
 apt update -y
 apt upgrade -y
 apt autoremove -y
-apt install -y git wget curl make
+apt install -y git wget curl make vim
 
 # firewall
 ufw allow ssh
@@ -23,6 +21,7 @@ ufw enable
 #USER_N name, github account for SSH
 USER_1=("martin" "mbouldo")
 USER_2=("idean" "clevlandpink")
+
 USERS=(
   USER_1[@]
   USER_2[@]
@@ -35,7 +34,7 @@ do
     USER=${!USERS[i]:0:1}
     GITHUB=${!USERS[i]:1:1}
     
-    addgroup dev
+    
     adduser --disabled-password --ingroup dev ${USER}
     usermod -aG sudo ${USER}
     usermod -aG www-data ${USER}
@@ -48,6 +47,7 @@ do
     chmod 600 /home/${USER}/.ssh/authorized_keys 
 done
 
-
+chown -R www-data:www-data /var/www
+chmod -R g+rwX /var/www
 
 
