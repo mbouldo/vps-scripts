@@ -35,19 +35,16 @@ do
     GITHUB=${!USERS[i]:1:1}
     
     
-    adduser --disabled-password --ingroup dev ${USER}
+    adduser --disabled-password ${USER}
     usermod -aG sudo ${USER}
     usermod -aG www-data ${USER}
     mkdir -p /home/${USER}/.ssh
 
     #get github keys
     curl https://github.com/${GITHUB}.keys > /home/${USER}/.ssh/authorized_keys 
-    chown -R ${USER}:dev /home/${USER}/.ssh
+    chown -R ${USER}:${USER} /home/${USER}/.ssh
     chmod 700 /home/${USER}/.ssh
     chmod 600 /home/${USER}/.ssh/authorized_keys 
 done
-
-chown -R www-data:www-data /var/www
-chmod -R g+rwX /var/www
 
 
