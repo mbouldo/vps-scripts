@@ -48,3 +48,7 @@ do
 done
 
 
+git clone https://github.com/mbouldo/vps-scripts.git
+chmod +x /vps-scripts/*.sh
+
+
