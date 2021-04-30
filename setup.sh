@@ -10,7 +10,7 @@ timedatectl set-timezone UTC
 apt update -y
 apt upgrade -y
 apt autoremove -y
-apt install -y git wget curl make vim
+apt install -y git wget curl make vim unzip
 
 # firewall
 ufw allow ssh
