@@ -25,4 +25,5 @@ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sed -i "s/# \[sshd\]/\[sshd\]/g" /etc/fail2ban/jail.local
 sed -i "s/# enabled = true/enabled = true/g" /etc/fail2ban/jail.local
 fail2ban-client start
+systemctl enable fail2ban
 sudo systemctl restart sshd
