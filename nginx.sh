@@ -15,11 +15,11 @@ chmod -R g+rwX /var/www
 chmod 2775 /var/www
 
 #mysql
-apt install mysql-server
+apt install -y mysql-server
 mysql_secure_installation
 
 #php
-apt install php-fpm php-mysql
+apt install -y php-fpm php-mysql
 
 wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/default_config
 echo Enter Domain: 
@@ -36,5 +36,7 @@ mv $domain /etc/nginx/sites-available/$domain
 ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 unlink /etc/nginx/sites-enabled/default
 nginx -t
+mkdir /var/www/${domain}
+wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/index.php -P /var/www/${domain}
 systemctl reload nginx
 
