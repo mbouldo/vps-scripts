@@ -27,6 +27,8 @@ USERS=(
   USER_2[@]
 )
 
+addgroup dev
+
 # Loop and print it.  Using offset and length to extract values
 COUNT=${#USERS[@]}
 for ((i=0; i<$COUNT; i++))
@@ -35,9 +37,8 @@ do
     GITHUB=${!USERS[i]:1:1}
     
     
-    adduser --disabled-password ${USER}
+    adduser --disabled-password --ingroup dev ${USER}
     usermod -aG sudo ${USER}
-    usermod -aG www-data ${USER}
     mkdir -p /home/${USER}/.ssh
 
     #get github keys
@@ -50,5 +51,8 @@ done
 
 git clone https://github.com/mbouldo/vps-scripts.git
 chmod +x vps-scripts/*.sh
+
+# fix permissions
+# add certbot
 
 
