@@ -9,10 +9,12 @@ ufw allow http
 ufw allow https
 sudo ufw allow 'Nginx HTTP'
 
-mkdir -p /var/www/html
-chown -R www-data:www-data /var/www
-chmod -R g+rwX /var/www
-chmod 2775 /var/www
+
+sudo chgrp -R dev /var/www
+sudo chmod -R g=rwX /var/www/
+sudo find /var/www -type f -exec chmod 664 {} \;
+sudo find /var/www -type d -exec chmod 775 {} \;
+sudo find /var/www -type d -exec chmod g+s {} \;
 
 #mysql
 apt install -y mysql-server
