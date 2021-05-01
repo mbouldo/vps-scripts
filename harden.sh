@@ -16,8 +16,8 @@ echo Press any key to continue...
 read cont
 
 
-wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/sshd_config -P /etc/ssh
-
+wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/sshd_config
+mv sshd_config /etc/ssh/sshd_config
 
 apt-get install -y fail2ban
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
