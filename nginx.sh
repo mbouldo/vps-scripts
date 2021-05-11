@@ -10,10 +10,9 @@ ufw allow https
 sudo ufw allow 'Nginx HTTP'
 
 
-sudo chgrp -R dev /var/www
-sudo chmod -R g=rwX /var/www/
-sudo find /var/www -type f -exec chmod 664 {} \;
-sudo find /var/www -type d -exec chmod 775 {} \;
+sudo chown -R dev /var/www
+sudo chmod -R o+r /var/www
+sudo chmod -R g+w /var/www
 sudo find /var/www -type d -exec chmod g+s {} \;
 
 #mysql
