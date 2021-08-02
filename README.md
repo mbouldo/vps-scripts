@@ -18,3 +18,12 @@ git push origin main:main
 
 #make sure you are in foder, make sure you have a key assoc.
 
+
+give user permission to www-data:
+
+
+sudo chown -R yourname:www-data /var/www/pathtowebsite.com
+
+sudo chmod -R g+s /var/www/pathtowebsite.com
+
+
