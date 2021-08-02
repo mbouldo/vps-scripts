@@ -1,7 +1,9 @@
 # vps-scripts
 bash vps setup scripts
+
 wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/setup.sh; chmod +x setup.sh
 
+ scp filename.png martin@123.123.123.123:/var/www/website.com
 
 #Do this before hardening
 passwd USERNAME
