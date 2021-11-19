@@ -41,3 +41,7 @@ mkdir /var/www/${domain}
 wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/index.php -P /var/www/${domain}
 systemctl reload nginx
 
+
+sudo chown -R martin:www-data /var/www
+sudo chmod -R g+s /var/www
+
