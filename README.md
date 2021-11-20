@@ -29,7 +29,17 @@ sudo chmod -R g+s /var/www/pathtowebsite.com
 
 ## create your first mysql database with server
 sudo mysql
+
 CREATE DATABASE IF NOT EXISTS db_name_here;
+
 CREATE USER 'user_name_here'@'localhost' IDENTIFIED BY 'password_here';
+
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+
 FLUSH PRIVILEGES;
+
+#tunnel in with terminal
+
+ssh -L13306:localhost:3306 user@159.000.00.00
+ 
+ 
