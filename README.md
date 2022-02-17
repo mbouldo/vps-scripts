@@ -38,8 +38,13 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 FLUSH PRIVILEGES;
 
-#tunnel in with terminal
+# tunnel in with terminal
 
 ssh -L13306:localhost:3306 user@159.000.00.00
  
- 
+## create a backup of a database
+sudo mysqldump db_name > backup-file.sql
+(this will save it to your current directory)
+
+> then create a database w/ a name on new server
+ sudo mysql db_name < file.sql
