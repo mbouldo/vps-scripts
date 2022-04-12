@@ -16,6 +16,33 @@ ssh-agent bash -c 'ssh-add /home/USERNAME/.ssh/authorized_keys; git clone git@gi
 to push:
 git push origin main:main
 
+# Github ver. (2)
+ssh-keygen -o 
+// accept default file path w/ respect to your user.
+cat /home/martin/.ssh/id_rsa.pub
+//paste key into github settings
+ssh -T git@github.com
+//test connection
+cd /your/projectd/directory
+git init
+git remote add origin git@github.com:mbouldo/NHSTF.git
+git status
+//will give you every file that has been changed in previous round.
+git add .
+//track all files in directory, might take a while if big repo
+git config --global user.email "mbouldo@gmail.com"
+git config --global user.name "Martin B"
+
+git commit -m "First Commit"
+git push --set-upstream origin master
+
+//next changes?
+git add .
+git commit -m "Desc"
+git push
+
+
+
 #make sure you are in foder, make sure you have a key assoc.
 
 
