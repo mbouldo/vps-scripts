@@ -38,4 +38,23 @@ module.exports = {
   },
 ```
 
+## in your tailwind.config.js
+
+```json
+module.exports = {
+  mode: 'jit',
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
 > npm start
+
+
+
