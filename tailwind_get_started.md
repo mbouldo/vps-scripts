@@ -2,8 +2,7 @@
 npx create-react-app my-app
 ```
 ``` 
-npm 
-install -D tailwindcss
+npm install -D tailwindcss
 ```
 ``` 
 npx tailwindcss init
