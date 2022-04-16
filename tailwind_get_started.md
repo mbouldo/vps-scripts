@@ -40,7 +40,7 @@ module.exports = {
 
 ## in your tailwind.config.js
 
-```json
+```js
 module.exports = {
   mode: 'jit',
   content: [
