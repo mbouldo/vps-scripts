@@ -6,7 +6,8 @@
 > npm install @craco/craco --legacy-peer-deps
 
 ## create craco.config.js in root
-```
+
+```js
 module.exports = {
     style: {
         postcssOptions: {
@@ -29,7 +30,8 @@ module.exports = {
 
 
 ## replace package.json scripts with:
-```
+
+```js
   "scripts": {
     "start": "craco start",
     "build": "craco build",
