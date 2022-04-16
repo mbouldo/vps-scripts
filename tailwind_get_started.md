@@ -1,10 +1,15 @@
-```npx create-react-app my-app
 ```
-``` npm install -D tailwindcss
+npx create-react-app my-app
 ```
-``` npx tailwindcss init
+``` 
+npm 
+install -D tailwindcss
 ```
-``` npm install @craco/craco --legacy-peer-deps
+``` 
+npx tailwindcss init
+```
+``` 
+npm install @craco/craco --legacy-peer-deps
 ```
 
 ## create craco.config.js in root
@@ -58,7 +63,8 @@ module.exports = {
 
 ```
 
-```npm start
+```
+npm start
 ```
 
 
