@@ -48,7 +48,7 @@ module.exports = {
 @tailwind utilities;
 
 @layer components {
-    .custom-class
+    .custom-class{
         @apply relative flex items-center justify-center;
     }
 }
