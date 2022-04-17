@@ -105,3 +105,9 @@ npm install body-parser cors express mongoose nodemon
     "start": "nodemon index.js"
   },
   ```
+  
+  ```
+mkdir controllers
+mkdir models
+mkdir routes
+```
