@@ -80,6 +80,16 @@ module.exports = {
 }
 
 ```
+## cd client
+```
+mkdir actions
+mkdr api
+mkdir components
+mkdir constants
+mkdir assets
+mkdir reducers
+```
+
 
 
 ## server init
