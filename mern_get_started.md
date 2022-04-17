@@ -21,6 +21,8 @@ npm install -D tailwindcss
 npx tailwindcss init
 npm install @craco/craco --legacy-peer-deps
 ```
+Delete & recreate src folder
+
 ## server init
 ```
 npm init -y
