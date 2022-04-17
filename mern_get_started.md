@@ -21,3 +21,8 @@ npm install -D tailwindcss
 npx tailwindcss init
 npm install @craco/craco --legacy-peer-deps
 ```
+## server init
+```
+npm init -y
+npm install body-parser cors express mongoose nodemon       
+```
