@@ -100,6 +100,7 @@ npm install body-parser cors express mongoose nodemon
 
 ## package.json in server
 ```js
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
