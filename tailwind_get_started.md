@@ -33,6 +33,12 @@ module.exports = {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .custom-class
+        @apply relative flex items-center justify-center;
+    }
+}
 ```
 
 ## replace package.json scripts with:
