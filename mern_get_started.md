@@ -80,10 +80,10 @@ module.exports = {
 }
 
 ```
-## cd client
+## cd client/src (!! SRC folder)
 ```
 mkdir actions
-mkdr api
+mkdir api
 mkdir components
 mkdir constants
 mkdir assets
