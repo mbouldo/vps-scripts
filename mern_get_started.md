@@ -97,3 +97,10 @@ mkdir reducers
 npm init -y
 npm install body-parser cors express mongoose nodemon       
 ```
+
+## package.json in server
+```js
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  ```
