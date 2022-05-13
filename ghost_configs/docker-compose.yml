@@ -27,7 +27,7 @@ services:
     ports:
       - "13928:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: __MYSQL_ROOT_PASSWORD__
+      MYSQL_ROOT_PASSWORD: __MYSQL_USER_PASSWORD__
       MYSQL_DATABASE: ghost
       MYSQL_USER: user
       MYSQL_PASSWORD: __MYSQL_USER_PASSWORD__
