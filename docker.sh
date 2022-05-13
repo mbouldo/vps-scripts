@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo What user will create this docker?
+read username
+sudo usermod -aG docker ${username}
+su $username
+
 sudo apt update -y
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
