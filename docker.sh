@@ -30,7 +30,8 @@ sed -i "s/__DOMAIN__/${domain}/g" docker-compose.yml
 sed -i "s/__PROJECT_NAME__/${project_name}/g" docker-compose.yml
 sed -i "s/__MYSQL_ROOT_PASSWORD__/${mysql_root_password}/g" docker-compose.yml
 sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.yml
-
+docker-compose up -d
+docker ps
 
 https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
 sed -i "s/__DOMAIN__/${domain}/g" nginx_conf
