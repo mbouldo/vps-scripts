@@ -8,4 +8,9 @@ sudo apt update
 apt-cache policy docker-ce
 
 sudo apt install docker-ce
-sudo systemctl status docker
+sudo apt-get install docker-compose
+
+
+sudo apt-get install nginx
+
+sudo ufw allow 'Nginx Full'
