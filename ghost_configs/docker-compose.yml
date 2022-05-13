@@ -1,5 +1,5 @@
 
-version: '3.3'
+version: '3.8'
 
 services:
   blog:
@@ -20,7 +20,7 @@ services:
       NODE_ENV: production
 
   database:
-    image: mysql:5.7
+    image: mysql:8.0
     restart: always
     volumes:
       - ~/data/db:/var/lib/mysql
