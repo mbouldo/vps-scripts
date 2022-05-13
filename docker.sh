@@ -25,12 +25,20 @@ sudo ufw allow 'Nginx Full'
 sudo wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/docker-compose.yml
 echo Enter Your Domain: 
 read domain
+echo domain
+
 echo Enter Your Project Name: 
 read project_name
+echo project_name
+
+
 echo Enter Your mySQL Root Password:
 read mysql_root_password
+echo mysql_root_password
+
 echo Enter your mySQL User Password:
 read mysql_user_password
+echo mysql_user_password
 
 
 sudo wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
