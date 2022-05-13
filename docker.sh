@@ -1,17 +1,17 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt update -y
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
+sudo apt update -y
+apt-cache policy docker-ce -y
 
-sudo apt install docker-ce
-sudo apt-get install docker-compose
+sudo apt install docker-ce -y
+sudo apt-get install docker-compose -y
 
 
-sudo apt-get install nginx
+sudo apt-get install nginx -y
 
 sudo ufw allow 'Nginx Full'
 
@@ -27,7 +27,7 @@ echo Enter your mySQL User Password:
 read mysql_user_password
 
 
-https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
+wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
 sed -i "s/__DOMAIN__/${domain}/g" nginx_conf
 mv nginx_conf $domain
 mv $domain /etc/nginx/sites-available/$domain
