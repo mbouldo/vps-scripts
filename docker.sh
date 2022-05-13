@@ -15,7 +15,7 @@ sudo apt install docker-ce -y
 sudo apt-get install docker-compose -y
 
 sudo usermod -aG docker ${username}
-su $username
+
 
 sudo apt-get install nginx -y
 
@@ -47,8 +47,10 @@ sudo sed -i "s/__PROJECT_NAME__/${project_name}/g" docker-compose.yml
 sudo sed -i "s/__MYSQL_ROOT_PASSWORD__/${mysql_root_password}/g" docker-compose.yml
 sudo sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.yml
 
-mkdir ~/$project_name/
-sudo mv docker-compose.yml ~/$project_name/
+mkdir /home/$username/$project_name/
+sudo mv docker-compose.yml /home/$username/$project_name/
+
+su $username
 cd ~/$project_name/
 
 sudo docker-compose up -d
