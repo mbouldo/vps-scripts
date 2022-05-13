@@ -9,5 +9,5 @@ sudo ufw delete allow 'Nginx HTTP'
 
 echo Enter Domain: 
 read domain
-sudo certbot --nginx -d $domain -d www.$domain
+sudo certbot --nginx -d $domain
 sudo systemctl status snap.certbot.renew.timer
