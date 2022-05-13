@@ -1,5 +1,5 @@
 server {
-    server_name  __DOMAIN__;
+    server_name  __DOMAIN__ www.__DOMAIN__;
     index index.html index.htm;
     access_log /var/log/nginx/blog.log;
     error_log  /var/log/nginx/blog-error.log error;
