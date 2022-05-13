@@ -50,10 +50,10 @@ sudo sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.
 mkdir /home/$username/$project_name/
 sudo mv docker-compose.yml /home/$username/$project_name/
 
+cd /home/$username/$project_name/
 su $username
-cd ~/$project_name/
 
-sudo docker-compose up -d
-sudo docker ps
+docker-compose up -d
+docker ps
 
 
