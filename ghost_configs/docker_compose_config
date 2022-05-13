@@ -16,7 +16,7 @@ services:
       database__connection__user: root
       database__connection__password: __MYSQL_USER_PASSWORD__
       database__connection__database: ghost
-      url: https://tecoblog.ddns.net
+      url: https://__DOMAIN__
       NODE_ENV: production
 
   database:
