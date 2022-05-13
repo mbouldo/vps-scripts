@@ -1,19 +1,6 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
 
-sudo apt install docker-ce
-sudo apt-get install docker-compose
-
-
-sudo apt-get install nginx
-
-sudo ufw allow 'Nginx Full'
 
 
 wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/docker-compose.yml
@@ -26,5 +13,7 @@ read mysql_root_password
 echo Enter your mySQL User Password:
 read mysql_user_password
 
-mv docker-compose.yml $domain
-sed -i "s/your_domain/${domain}/g" $domain
+sed -i "s/__DOMAIN__/${domain}/g" docker-compose.yml
+sed -i "s/__PROJECT_NAME__/${project_name}/g" docker-compose.yml
+sed -i "s/__MYSQL_ROOT_PASSWORD__/${mysql_root_password}/g" docker-compose.yml
+sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.yml
