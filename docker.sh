@@ -2,8 +2,7 @@
 
 echo What user will create this docker?
 read username
-sudo usermod -aG docker ${username}
-su $username
+
 
 sudo apt update -y
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
@@ -15,6 +14,8 @@ apt-cache policy docker-ce -y
 sudo apt install docker-ce -y
 sudo apt-get install docker-compose -y
 
+sudo usermod -aG docker ${username}
+su $username
 
 sudo apt-get install nginx -y
 
