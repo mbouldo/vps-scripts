@@ -26,12 +26,6 @@ read mysql_root_password
 echo Enter your mySQL User Password:
 read mysql_user_password
 
-sed -i "s/__DOMAIN__/${domain}/g" docker-compose.yml
-sed -i "s/__PROJECT_NAME__/${project_name}/g" docker-compose.yml
-sed -i "s/__MYSQL_ROOT_PASSWORD__/${mysql_root_password}/g" docker-compose.yml
-sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.yml
-docker-compose up -d
-docker ps
 
 https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
 sed -i "s/__DOMAIN__/${domain}/g" nginx_conf
@@ -41,3 +35,16 @@ ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 unlink /etc/nginx/sites-enabled/default
 
 systemctl reload nginx
+
+sed -i "s/__DOMAIN__/${domain}/g" docker-compose.yml
+sed -i "s/__PROJECT_NAME__/${project_name}/g" docker-compose.yml
+sed -i "s/__MYSQL_ROOT_PASSWORD__/${mysql_root_password}/g" docker-compose.yml
+sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.yml
+
+mv docker-compose.yml ~/$project_name/
+cd ~/$project_name/
+
+docker-compose up -d
+docker ps
+
+
