@@ -14,3 +14,10 @@ sudo apt-get install docker-compose
 sudo apt-get install nginx
 
 sudo ufw allow 'Nginx Full'
+
+
+wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/default_config
+echo Enter Domain: 
+read domain
+mv default_config $domain
+sed -i "s/your_domain/${domain}/g" $domain
