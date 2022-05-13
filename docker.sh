@@ -16,8 +16,15 @@ sudo apt-get install nginx
 sudo ufw allow 'Nginx Full'
 
 
-wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/sp/default_config
-echo Enter Domain: 
+wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/docker-compose.yml
+echo Enter Your Domain: 
 read domain
-mv default_config $domain
+echo Enter Your Project Name: 
+read project_name
+echo Enter Your mySQL Root Password:
+read mysql_root_password
+echo Enter your mySQL User Password:
+read mysql_user_password
+
+mv docker-compose.yml $domain
 sed -i "s/your_domain/${domain}/g" $domain
