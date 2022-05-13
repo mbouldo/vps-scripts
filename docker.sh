@@ -49,7 +49,7 @@ sudo sed -i "s/__MYSQL_USER_PASSWORD__/${mysql_user_password}/g" docker-compose.
 
 mkdir ~/$project_name/
 sudo mv docker-compose.yml ~/$project_name/
-sudo cd ~/$project_name/
+cd ~/$project_name/
 
 sudo docker-compose up -d
 sudo docker ps
