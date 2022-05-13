@@ -1,5 +1,7 @@
 #!/bin/bash
-sudo apt install -y certbot python3-certbot-nginx
+sudo apt install snapd
+sudo snap install --classic certbot
+
 sudo ufw allow 'Nginx Full'
 sudo ufw delete allow 'Nginx HTTP'
 
@@ -8,4 +10,4 @@ sudo ufw delete allow 'Nginx HTTP'
 echo Enter Domain: 
 read domain
 sudo certbot --nginx -d $domain -d www.$domain
-sudo systemctl status certbot.timer
+sudo systemctl status snap.certbot.renew.timer
