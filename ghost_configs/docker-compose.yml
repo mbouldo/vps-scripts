@@ -2,7 +2,7 @@
 version: '3.8'
 
 services:
-  blog:
+  __PROJECT_NAME__:
     image: ghost:4
     restart: always
     ports:
