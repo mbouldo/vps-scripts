@@ -34,7 +34,7 @@ read mysql_user_password
 
 
 sudo wget https://raw.githubusercontent.com/mbouldo/vps-scripts/master/ghost_configs/nginx_conf
-sed -i "s/__DOMAIN__/${domain}/g" nginx_conf
+sudo sed -i "s/__DOMAIN__/${domain}/g" nginx_conf
 sudo mv nginx_conf $domain
 sudo mv $domain /etc/nginx/sites-available/$domain
 sudo ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
