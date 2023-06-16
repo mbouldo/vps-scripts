@@ -19,6 +19,10 @@ sudo find /var/www -type d -exec chmod g+s {} \;
 apt install -y mysql-server
 mysql_secure_installation
 
+#when this errors, re-login
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'mynewpassword';
+# then run mysql_secure_installation again
+
 #php
 apt install -y php-fpm php-mysql
 
