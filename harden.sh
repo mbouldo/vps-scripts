@@ -27,3 +27,4 @@ sed -i "s/# enabled = true/enabled = true/g" /etc/fail2ban/jail.local
 fail2ban-client start
 systemctl enable fail2ban
 sudo systemctl restart sshd
+sudo systemctl restart ssh # might be required if installed incorrectly.
