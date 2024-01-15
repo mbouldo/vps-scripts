@@ -94,3 +94,10 @@ sudo mysqldump db_name > backup-file.sql
 
 > then create a database w/ a name on new server
  sudo mysql db_name < file.sql
+
+### Useful to check GB usage
+You can use ncdu to find out which folder(s) is/are using so much disk space:
+
+sudo apt install ncdu
+ncdu /
+
