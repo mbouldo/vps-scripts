@@ -74,6 +74,7 @@ sudo chmod -R g+s /var/www/pathtowebsite.com
 
 ## give permissions to upload files to the public folder:
 ```sudo chown -R www-data:www-data /var/www/pinecreekfb.com/public```
+
 ```sudo chmod -R u+rwx /var/www/pinecreekfb.com/public```
 
 
